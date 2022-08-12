@@ -138,11 +138,82 @@
             echo $recipe['recipe'];
             ?>
 
+            <?php
+            $recipe = [
+                'title' => 'Cassoulet',
+                'recipe' => 'Etape 1 : des flageolets, Etape 2 : ...',
+                'author' => 'mickael.andrieu@exemple.com',
+                'enabled' => true,
+            ];
+
+            foreach ($recipe as $value) {
+                echo $value ;
+            }
+
+            /**
+             * AFFICHE
+             * CassouletEtape 1 : des flageolets, Etape 2 : ...mickael.andrieu@exemple.com1
+             */
+            ?>
 
            
-            
+            <?php
+
+            $recipes = [
+                [
+                    'title' => 'Cassoulet',
+                    'recipe' => '',
+                    'author' => 'mickael.andrieu@exemple.com',
+                    'is_enabled' => true,
+                ],
+                [
+                    'title' => 'Couscous',
+                    'recipe' => '',
+                    'author' => 'mickael.andrieu@exemple.com',
+                    'is_enabled' => false,
+                ],
+                [
+                    'title' => 'Escalope milanaise',
+                    'recipe' => '',
+                    'author' => 'mathieu.nebra@exemple.com',
+                    'is_enabled' => true,
+                ],
+                [
+                    'title' => 'Salade Romaine',
+                    'recipe' => '',
+                    'author' => 'laurene.castor@exemple.com',
+                    'is_enabled' => false,
+                ],
+            ];
+
+            foreach($recipes as $recipe) {
+                echo $recipe['title'] . ' contribué(e) par : ' . $recipe['author'] . PHP_EOL; 
+            }
+
+            ?>
 
            
+            <?php
+
+            $recipes = [
+                [
+                    'title' => 'Cassoulet',
+                    'recipe' => '',
+                    'author' => 'mickael.andrieu@exemple.com',
+                    'is_enabled' => true,
+                ],
+                [
+                    'title' => 'Couscous',
+                    'recipe' => '',
+                    'author' => 'mickael.andrieu@exemple.com',
+                    'is_enabled' => false,
+                ],
+            ];
+
+            echo '<pre>';
+            print_r($recipes);
+            echo '</pre>';
+            ?>
 
         
         
